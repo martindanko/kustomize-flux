@@ -1,0 +1,12 @@
+git:
+  pollInterval: 1m
+  url: ssh://git@github.com/particuleio/gitops-demo.git
+  branch: master
+  path: kustomize-flux/preprod
+syncGarbageCollection:
+  enabled: true
+manifestGeneration: true
+additionalArgs:
+  -  --git-sync-tag=flux-sync-preprod
+allowedNamespaces:
+  - preprod
